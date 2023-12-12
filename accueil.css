@@ -1,0 +1,470 @@
+/*Declaration des variables*/
+:root{
+    --color1: #F2CEF2;
+    --color2: #9E91B7;
+    --color3: #DF99F2;
+    --color4: #3D2DA6;
+    --color5: #07338C;
+    --color6: #021740;
+}
+
+/*INITIALISATION DES STYLES POUR TOUTES*/
+*{
+    box-sizing: border-box;
+    color: #FFFFFF;
+    margin: 0px;
+    padding: 0px;
+    background-repeat: no-repeat;
+    font-family: sans-serif;
+    font-size: small;
+
+}
+body, html{
+    background-color: #070d18;
+    background-repeat: repeat;
+    background-image: linear-gradient(110deg, #11213F 0%, #070d18 30%, #070d18 50%, #021740 70%);
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+}
+.pinky{
+    color: #9E91B7;
+}
+.large{
+    font-size: x-large;
+}
+.medium{
+    font-size: medium;
+}
+.small {
+    font-size: smaller;
+}
+.beyno{
+    font-family: 'BEYNO', sans-serif;
+}
+.panther{
+    font-family: 'Panthera', sans-serif;
+}
+.cantarell {
+    font-family: 'Cantarell', sans-serif;
+}
+.wakanda
+{
+    font-family: 'Wakanda Forever', sans-serif;
+}
+.Verdana{
+    font-family: Verdana, sans-serif;
+    line-height: 1.5rem;
+}
+
+
+
+
+/*Styles pour les elements dans header*/
+header{
+    position: relative;
+}
+#reseaux{
+    left: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: absolute;
+    height: 150px;
+    width: 30px;
+    transition: height 2s ease;
+    justify-items: center;
+    column-gap: 10px;
+}
+nav{
+    height: 10vh;
+    display: flex;
+    padding: 0rem 8rem;
+    align-items: center;
+    justify-content: space-around;
+    width: 100vw;
+}
+nav a{
+    text-decoration: none;
+    font-family: panther, sans-serif;
+}
+header summary{
+    height: 100vh;
+    padding: 0rem 12rem;
+    background-image: url("/Pantherhome1..png");
+    background-position: center;
+    background-position-x: 110%;
+    background-size: auto 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+summary p{
+    margin-top: 2rem;
+    width: 20rem;
+    font-size: small;
+}
+summary h1{
+    cursor: default;
+    font-size: 50px;
+    transition: 0.3s font-size ease;
+}
+
+
+/*Styles pour le defilement des personnages*/
+#personnages{
+    transform: scale(0.9);
+    height: 450px;
+    overflow: hidden;
+    width: 100vw;
+    position: relative;
+    padding-left: 4rem;
+}
+#slider{
+    position: absolute;
+    display: flex;
+    left: 10px;
+    flex-wrap: nowrap;
+    margin-top: 50px;
+    margin-bottom: auto;
+    height: 341px;
+    width: calc(295px * 20);
+    overflow: visible;
+    background-color: #021740;
+    padding-left: 20rem;
+    transition: 1s transform ease;
+}
+#slider img{
+    transition: transform 1s ease, left 1s ease;
+}
+.zoom{
+    transform: scale(1.2) translate(-45px);
+}
+.conteneur{
+    width: 295px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 341px;
+    padding: 1.5rem;
+}
+.conteneur p {
+    transition: font-size 1s ease;
+}
+.conteneur .beyno{
+    margin-bottom: 2.5rem;
+}
+#defiler{
+    font-size: xx-large;
+    width: 4rem;
+    height: 4rem;
+    background-color: #021740;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    padding-left: 0.7rem;
+    border-radius: 50% 50%;
+    cursor: pointer;
+    border: none;
+    left: -50%;
+}
+#defiler:hover{
+    box-shadow: 0px 0px 15px 3px #F2CEF2;
+}
+
+
+
+/*Styles pour les elements dans main*/
+main{
+    padding: 8rem 4rem 8rem 10rem;
+    display: grid;
+    grid-template-columns: 1fr 0.75fr;
+    column-gap: 8rem;
+}
+
+.fondu {
+    position: relative;
+    opacity: 0;
+    transition: 2s opacity ease;
+}
+.fondu.active1 {
+    opacity: 1;
+}
+.slide {
+    position: relative;
+    left: -50px;
+    transition: left 2s ease;
+}
+.slide.active2{
+    left: 0px;
+}
+.scale {
+    transition: transform 0.5s ease;
+}
+
+.scale.active {
+    transform: scale(1.1) translateY(-30px);
+}
+
+main section{
+    margin-bottom: 2rem;
+}
+main p{
+    text-align: justify;
+    font-family: 'Cantarell' ,sans-serif;
+    font-weight: 50;
+    font-size: 13px;
+}
+h2{
+    font-family: 'BEYNO', sans-serif;
+    font-size: 23px;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #9E91B7;
+}
+
+
+#fiche{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 4rem;
+}
+#label span{
+    background-color: #3D2DA6;
+    border-radius: 5px 5px;
+    padding: 1rem;
+    font-size: x-small;
+}
+#fiche2 {
+    margin-top: 250px;
+    width: 430px;
+    border-radius: 10px 10px;
+    padding: auto;
+    background-color: #FFFFFF;
+    display: flex;
+    height: 800px;
+    flex-direction: column;
+    align-items: center;
+}
+#fiche2 p{
+    position: relative; top: -250px;
+    color: #070d18;
+    margin-top: 1.5rem;
+    padding: 0rem 6rem;
+}
+#fiche2 p span{
+    color: #070d18;
+    font-weight: 700;
+}
+#label{
+    display: flex; position: relative; top: -250px; column-gap: 1rem;
+    justify-content: center;
+}
+
+
+
+
+/*Styles pour les éléments dans contacter*/
+#contacter{
+    height: 1077px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/Pantherhome4.png");
+}
+
+form{
+    width: 60%;
+    height: 500px;
+    border-radius: 150px 150px;
+    background-image: linear-gradient(to bottom, #FFFFFF, transparent);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #070d18;
+    justify-content: center;
+}
+form p{
+    color: #070d18;
+}
+form .conteneur{
+    border-radius: 3rem 3rem;
+    padding: 1rem;
+}
+form input {
+    background-color: transparent;
+    border: 1px solid #11213F;
+    color: #070d18;
+    width: 400px;
+    padding: 1rem;
+    border-radius: 2rem 2rem;
+    margin-left: -5rem;
+    font-size: 14px;
+}
+form input::placeholder, form textarea::placeholder{
+    color: #070d18;
+    opacity: 1;
+}
+form textarea{
+    margin-left: -5rem;
+    border: 1px solid #11213F;
+    box-sizing: border-box;
+    width: 400px;
+    padding: 1rem;
+    background-color: transparent;
+    border-radius: 2rem 2rem;
+    color: #070d18;
+}
+form button{
+    padding: 1rem 3rem;
+    color: #070d18;
+    font-weight: 600;
+    border-radius: 3rem 3rem;
+    background-color: #F2CEF2;
+}
+
+
+/*Styles pour les elements dans footer*/
+footer{
+    padding: 4rem;
+    color: rgb(182, 182, 182);
+    background-image: linear-gradient(to bottom, #3D2DA6, #021740 40%);
+    column-gap: 8rem;
+    align-items: center;
+    display: flex;
+}
+#image{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("/icon_SaynaXMarvel.png"), url("/Group\ 2052.png");
+    height: 385px;
+    width: 330px;
+}
+#contact{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-row: 4fr 1fr;
+    column-gap: 14rem;
+    height: 40vh;
+}
+h3{
+    font-size: 18px;
+    letter-spacing: 12px;
+}
+
+
+/*Classes pour les animations*/
+.lightUp{
+    background-image: none;
+    transition: background-image 0.5s ease;
+}
+.lightUp.active{
+    background-image: radial-gradient(ellipse at center, rgb(240, 240, 240, 0.7), transparent 80%);
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: light 1s;
+}
+
+
+
+
+/*GESTION DU RESPONSIVE*/
+@media (max-width: 1000px){
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    footer{
+        flex-direction: column;
+        row-gap: 8rem;
+    }
+}
+@media (max-width: 600px){
+    nav{
+        padding: 0rem 2rem;
+    }
+    nav img{
+        margin: 0px !important;
+        width: 6rem !important;
+        height: auto !important;
+    }
+    nav a{
+        font-size: 0.8rem !important;
+    }
+    #reseaux{
+        display: none;
+    }
+    #personnages{
+        margin-left: -2rem;
+        width: 120%;
+        padding: 0px;
+    }
+
+    header summary{
+        height: 60vh;
+        background-size: 70% auto;
+        background-position: bottom center;
+        padding: 1rem 2rem;
+        justify-content: flex-start;
+        row-gap: 1rem;
+    }
+    #slider{
+        padding-left: 4rem;
+        align-items: center;
+    }
+    #slider img{
+        height: auto;
+        width: 30vw;
+    }
+    #personnages .conteneur{
+        width: 70vw;
+        padding: 2rem;
+        box-sizing: border-box;
+    }
+    #defiler{
+        top: 450px;
+        right: 50%;
+        transform: translateX(50%);
+    }
+    main{
+        padding: 2rem;
+    }
+    #fiche{
+        margin-top: 50px;
+        width: 100vw;
+        align-items: center;
+    }
+    #fiche2{
+        width: 80vw;
+        height: 40rem;
+    }
+    #fiche2 img{
+        width: 50vw;
+    }
+    #contacter form{
+        width: 90vw;
+        border-radius: 3rem 3rem;
+    }
+    #contacter .conteneur{
+        width: 75vw !important;
+    }
+    textarea{
+        width: 100% !important;
+        height: 100%;
+        margin-left: 0px !important;
+    }
+    form input{
+        margin: 0px;
+        width: 100%;
+    }
+    #contact{
+        display: none;
+    }
+    body{
+        width: 100vw;
+        overflow-x: hidden;
+    }
+}
